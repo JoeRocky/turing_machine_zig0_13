@@ -1,0 +1,51 @@
+& 00110101 00011010 00000000
+ 
+:main
+>7
+? *readVal2_0 *readVal2_1
+<1
+? *readVal2_0 *readVal2_1
+<1
+? *readVal2_0 *readVal2_1
+<1
+? *readVal2_0 *readVal2_1
+<1
+? *readVal2_0 *readVal2_1
+<1
+? *readVal2_0 *readVal2_1
+<1
+? *readVal2_0 *readVal2_1
+<1
+? *readVal2_0 *readVal2_1
+ 
+:readVal2_0
+>8
+? *writeVal3_0 *writeVal3_1
+
+
+:readVal2_1
+>8
+? *writeVal3_1 *writeVal3_2
+
+
+:writeVal3_0
+<8
+
+:writeVal3_1
+>8
+? *writeVal3_1_0 *writeVal3_1_1
+<16
+
+:writeVal3_1_0
+w1
+
+:writeVal3_1_1
+w0
+<1
+w1
+>1
+
+:writeVal3_2
+>7
+w1
+<15
